@@ -13,5 +13,6 @@ terraform {
 # Step 2: create the provider block which specifies the provider configuration.
 provider "aws" {
   region = "us-east-1"
+  profile = "terraform"
 }
 

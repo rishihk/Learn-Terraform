@@ -1,7 +1,7 @@
 # Part 2: Defining the services through resource blocks.
 # Running terraform plan will show the changes that will be made to the infrastructure.
 # Running terraform apply will apply the changes to the infrastructure.
-
+# Running terraform destroy will destroy the infrastructure.
 # I am creating an S3 bucket on my aws console.
 
 # Syntax explanation: resource "specify the resource provider" "name of the resource locally for terraform to reference { actual name of the resource on aws. tags { which are metadata for our resource.}} tags allow us to organize our resources and provide additional information about them.
@@ -14,8 +14,6 @@ resource "aws_s3_bucket" "terraform-bucket" {
     Environment = "Dev"
   }
 }
-
-
 
 # Now we want to create the aws cloudwatch log stream.
 # Step 1: Create the log group: collection contaainer for log streams that share the same retention, monitoring, and access control settings.
