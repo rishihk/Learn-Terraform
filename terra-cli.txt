@@ -1,0 +1,9 @@
+# Running terraform init will initialize the terraform configuration.
+# Running terraform plan will show the changes that will be made to the infrastructure.
+# Running terraform apply will apply the changes to the infrastructure.
+# Running terraform destroy will destroy the infrastructure.
+# Running just terraform will show us the list of commands that we can run with terraform.
+# Running terraform state will show us a list of commands that we can run with terraform state, like list which will list all the resources in the state file. 
+# Running terraform state show <resource> will show us the details of the resource in the state file. (Current configuration).
+# --auto-approve flag will apply changes without asking for confirmation.
+# -target <resource> flag will destroy/apply only the specified resource.

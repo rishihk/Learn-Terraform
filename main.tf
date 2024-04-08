@@ -1,15 +1,5 @@
 # Part 2: Defining the services through resource blocks.
 
-# Running terraform init will initialize the terraform configuration.
-# Running terraform plan will show the changes that will be made to the infrastructure.
-# Running terraform apply will apply the changes to the infrastructure.
-# Running terraform destroy will destroy the infrastructure.
-# Running just terraform will show us the list of commands that we can run with terraform.
-# Running terraform state will show us a list of commands that we can run with terraform state, like list which will list all the resources in the state file. 
-# Running terraform state show <resource> will show us the details of the resource in the state file. (Current configuration).
-# --auto-approve flag will apply changes without asking for confirmation.
-# -target <resource> flag will destroy/apply only the specified resource.
-
 # I am creating an S3 bucket on my aws console.
 
 # Syntax explanation: resource "specify the resource provider_required resource" "name of the resource locally for terraform to reference { actual name of the resource on aws. tags { which are metadata for our resource.}} tags allow us to organize our resources and provide additional information(metadata) about them.
