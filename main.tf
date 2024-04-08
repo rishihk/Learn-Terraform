@@ -2,6 +2,7 @@
 # Running terraform plan will show the changes that will be made to the infrastructure.
 # Running terraform apply will apply the changes to the infrastructure.
 # Running terraform destroy will destroy the infrastructure.
+
 # I am creating an S3 bucket on my aws console.
 
 # Syntax explanation: resource "specify the resource provider_required resource" "name of the resource locally for terraform to reference { actual name of the resource on aws. tags { which are metadata for our resource.}} tags allow us to organize our resources and provide additional information(metadata) about them.
@@ -39,9 +40,10 @@ resource "aws_instance" "terra-instance" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "terra-ec2"
+    Name = "terra-instance"
   }
 }
+
 
 
 
