@@ -49,7 +49,7 @@ output "instance-type"{
 
 # A virtual private cloud is a virtual section of the cloud that is logically isolated from other virtual networks in the cloud.
 resource "aws_vpc" "terra-vpc" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = var.vpc_cidr
 
   tags = {
     Name = "devl"
@@ -59,7 +59,7 @@ resource "aws_vpc" "terra-vpc" {
 # A subnet within a VPC is a range of IP addresses in the VPC. In other words it sections of our VPC which allow us to allocate IP addresses to our resources.
 resource "aws_subnet" "subnet1" {
   vpc_id            = aws_vpc.terra-vpc.id
-  cidr_block        = "10.0.1.0/24"
+  cidr_block        = var.subnet1_cidr
 
   tags = {
     Name = "devl-subnet"

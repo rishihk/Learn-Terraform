@@ -7,3 +7,5 @@
 # Running terraform state show <resource> will show us the details of the resource in the state file. (Current configuration).
 # --auto-approve flag will apply changes without asking for confirmation.
 # -target <resource> flag will destroy/apply only the specified resource.
+# terraform apply -var "<varname>" <value> can also set values of variables.
+# -var-file="<.tfvars file>" will allow us to pass the variables from the .tfvars file to the main.tf file. This is needed only when our tfvars file is not named terraform.tfvars.
