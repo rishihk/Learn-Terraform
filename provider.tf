@@ -2,6 +2,13 @@
 
 # Step 1: create the terraform required_providers block which specifies the required provider and its version.
 terraform {
+  backend "s3" {
+    bucket = "my-terra-state-bucket-3030"
+    encrypt = true
+    acl = "private"
+    region = "us-east-1"
+    key = "state-files"
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"

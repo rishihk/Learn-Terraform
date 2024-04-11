@@ -1,7 +1,16 @@
 # Part 2: Defining the services through resource blocks.
 
-# I am creating an S3 bucket on my aws console.
+# Create s3 bucket for backend state file storage.
+# Remember, when switching from local backend to remote backend, first create the s3 bucket for the backend state file storage, run terraform apply, then set the backend config on top, terra init, and apply.
+resource "aws_s3_bucket" "state-bucket" {
+  bucket = "my-terra-state-bucket-3030"
 
+  tags = {
+    Name        = "My bucket"
+  }
+}
+
+# Create an S3 bucket for user purpose on my aws console.
 # Syntax explanation: resource "specify the resource provider_required resource" "name of the resource locally for terraform to reference { actual name of the resource on aws. tags { which are metadata for our resource.}} tags allow us to organize our resources and provide additional information(metadata) about them.
 
 resource "aws_s3_bucket" "terraform-bucket" {
@@ -9,7 +18,6 @@ resource "aws_s3_bucket" "terraform-bucket" {
 
   tags = {
     Name        = "My bucket"
-    Environment = "Dev"
   }
 }
 
