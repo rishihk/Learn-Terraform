@@ -64,14 +64,5 @@ resource "aws_vpc" "terra-vpc" {
   }
 }
 
-# A subnet within a VPC is a range of IP addresses in the VPC. In other words it sections of our VPC which allow us to allocate IP addresses to our resources.
-resource "aws_subnet" "subnet1" {
-  vpc_id            = aws_vpc.terra-vpc.id
-  cidr_block        = var.subnet1_cidr
-
-  tags = {
-    Name = "devl-subnet"
-  }
-}
 
 
